@@ -14,7 +14,7 @@ type to console<br>
 ・token    : your bot token<br>
 ・datapath : log folder
 
-**3. create the shell script for run**
+**3. create the shell script for run**<br>
 ・cmd
 ```
 @echo off
