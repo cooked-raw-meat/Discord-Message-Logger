@@ -10,8 +10,8 @@ type to console<br>
 "git clone https://github.com/cooked-raw-meat/Discord-Message-Logger.git"<br>
 "cd Discord-Message-Logger"
 
-**2. edit to config.json**
-・token    : your bot token
+**2. edit to config.json**<br>
+・token    : your bot token<br>
 ・datapath : log folder
 
 **3. create the shell script for run**
