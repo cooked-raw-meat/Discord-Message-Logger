@@ -6,7 +6,9 @@
 ・discord.js
 
 **1. clone a repo & change dir**
-type to console "git clone https://github.com/cooked-raw-meat/Discord-Message-Logger.git" "cd Discord-Message-Logger"
+type to console
+"git clone https://github.com/cooked-raw-meat/Discord-Message-Logger.git"
+"cd Discord-Message-Logger"
 
 **2. edit to config.json**
 ・token    : your bot token
