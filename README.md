@@ -5,7 +5,7 @@
 ・node.js<br>
 ・discord.js<br>
 
-**1. clone a repo & change dir**
+**1. clone a repo & change dir**<br>
 type to console<br>
 "git clone https://github.com/cooked-raw-meat/Discord-Message-Logger.git"<br>
 "cd Discord-Message-Logger"
