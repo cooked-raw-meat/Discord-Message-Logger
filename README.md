@@ -1,9 +1,9 @@
 # How to Use
 
-**require**
-・git
-・node.js
-・discord.js
+**require**<br>
+・git<br>
+・node.js<br>
+・discord.js<br>
 
 **1. clone a repo & change dir**
 type to console<br>
