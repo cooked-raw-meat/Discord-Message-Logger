@@ -29,5 +29,5 @@ read -p "press enter to exit"
 exit
 ```
 
-**4. run shell script**
+**4. run shell script**<br>
 all steps complete
