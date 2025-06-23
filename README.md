@@ -6,8 +6,8 @@
 ・discord.js
 
 **1. clone a repo & change dir**
-type to console
-"git clone https://github.com/cooked-raw-meat/Discord-Message-Logger.git"
+type to console<br>
+"git clone https://github.com/cooked-raw-meat/Discord-Message-Logger.git"<br>
 "cd Discord-Message-Logger"
 
 **2. edit to config.json**
