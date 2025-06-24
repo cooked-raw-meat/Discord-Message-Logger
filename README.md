@@ -6,15 +6,18 @@
 ・discord.js<br>
 
 **1. clone a repo & change dir**<br>
+
 type to console<br>
 "git clone https://github.com/cooked-raw-meat/Discord-Message-Logger.git"<br>
 "cd Discord-Message-Logger"
 
 **2. edit to config.json**<br>
+
 ・token    : your bot token<br>
 ・datapath : log folder
 
 **3. create the shell script for run**<br>
+
 ・cmd
 ```
 @echo off
@@ -30,4 +33,5 @@ exit
 ```
 
 **4. run shell script**<br>
+
 all steps complete
