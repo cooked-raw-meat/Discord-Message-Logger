@@ -29,7 +29,6 @@ pause
 #!/bin/bash
 node index.js
 read -p "press enter to exit"
-exit
 ```
 
 **4. run shell script**<br>
