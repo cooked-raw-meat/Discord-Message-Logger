@@ -4,7 +4,7 @@
 ・git<br>
 ・node.js<br>
 ・discord.js<br>
-・fs<br>
+・fs-extra<br>
 ・simple-git<br>
 
 **1. clone a repo & change dir**<br>
