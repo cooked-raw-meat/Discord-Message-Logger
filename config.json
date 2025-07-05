@@ -1,4 +1,4 @@
 {
-  "token": "yourbottoken",
-  "datapath":"messages/"
+  "token": "bottoken",
+  "datapath":"messages"
 }
