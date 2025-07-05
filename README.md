@@ -35,4 +35,7 @@ read -p "press enter to exit"
 
 **4. run shell script**<br>
 
-all steps complete
+all steps complete<br>
+
+# Other
+・Update : node update.js
