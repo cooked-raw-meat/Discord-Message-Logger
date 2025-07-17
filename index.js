@@ -3,16 +3,13 @@ const fs = require("fs-extra");
 const http = require("http");
 const readLastLines = require('read-last-lines');
 const { token } = require("./config.json")
-const { datapath } = require("./config.json")
+let { datapath } = require("./config.json")
 const { port } = require("./config.json");
-const { read, readlink } = require("fs");
 const client = new Client({intents: [GatewayIntentBits.Guilds,GatewayIntentBits.GuildMessages,GatewayIntentBits.MessageContent,GatewayIntentBits.GuildMembers,],})
 if (!fs.existsSync(datapath)) {fs.mkdirSync(datapath);}
+if (!datapath.endsWith("/")) {datapath = datapath+"/"}
 client.login(token)
-
-client.on(Events.ClientReady, c => {
-	console.log(`${c.user.tag}`)
-})
+client.on(Events.ClientReady, c => {console.log(`${c.user.tag}`)})
 
 client.on('messageCreate', async message => {
 if (message.author.bot) {return}
@@ -26,6 +23,7 @@ fs.appendFile(filepath, content + "\n", function (err) {if (err) throw err})
 })
 
 http.createServer((req, res) => {
+	if (!port > 1024) {console.log("Set the port to 1024 higher");return;}
 	if (req.method === "POST") {
 		let body = ""
 		req.on("data", chunk => {body += chunk;});
