@@ -1,4 +1,5 @@
 {
   "token": "bottoken",
-  "datapath":"messages"
+  "datapath":"messages/",
+  "port":"80"
 }
