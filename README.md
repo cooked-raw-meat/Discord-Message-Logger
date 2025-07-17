@@ -3,9 +3,10 @@
 **require**<br>
 ・git<br>
 ・node.js<br>
-・discord.js<br>
-・fs-extra<br>
-・simple-git<br>
+・discord.js(npm module)<br>
+・fs-extra(npm module)<br>
+・simple-git(npm module)<br>
+・read-last-lines(npm module)<br>
 
 **1. clone a repo & change dir**<br>
 
