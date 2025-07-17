@@ -28,7 +28,7 @@ http.createServer((req, res) => {
 		let body = ""
 		req.on("data", chunk => {body += chunk;});
 	    req.on("end", () => {
-			if (!fs.existsSync(datapath+body+".txt")) {res.end("The guild has not saved");return;}
+			if (!fs.existsSync(datapath+body+".txt")) {res.end("The guild has not saved\n");return;}
 		    readLastLines.read(datapath+body+".txt", 50)
 		    .then((lines) => res.end(lines));
 	    });
