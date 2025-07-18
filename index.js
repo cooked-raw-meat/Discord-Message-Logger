@@ -3,7 +3,7 @@ const fs = require("fs-extra");
 const http = require("http");
 const readLastLines = require('read-last-lines');
 const { token } = require("./config.json")
-let { datapath } = require("./config.json")
+var { datapath } = require("./config.json")
 const { port } = require("./config.json");
 const client = new Client({intents: [GatewayIntentBits.Guilds,GatewayIntentBits.GuildMessages,GatewayIntentBits.MessageContent,GatewayIntentBits.GuildMembers,],})
 if (!fs.existsSync(datapath)) {fs.mkdirSync(datapath);}
@@ -25,14 +25,14 @@ fs.appendFile(filepath, content + "\n", function (err) {if (err) throw err})
 http.createServer((req, res) => {
 	if (!port > 1024) {console.log("Set the port to 1024 higher");return;}
 	if (req.method === "POST") {
-		let body = ""
+		var body = ""
 		req.on("data", chunk => {body += chunk;});
 	    req.on("end", () => {
-			if (!fs.existsSync(datapath+body+".txt")) {res.end("The guild has not saved\n");return;}
+			if (!fs.existsSync(datapath+body+".txt")) {var guildlist = fs.readdirSync(datapath);for (i = 0;i < guildlist.length;i++) {guildlist[i] = guildlist[i].replace(".txt","");guildlist[i] = guildlist[i] + "("+client.guilds.cache.get(guildlist[i])+")";}res.end("GuildID List\n"+guildlist);return;}
 		    readLastLines.read(datapath+body+".txt", 50)
 		    .then((lines) => res.end(lines));
 	    });
 	}else{
-		req.end("Please POST GuildID")
+		res.end("")
 	}
 }).listen(port, () => console.log("has http server started a "+port+"port"))
