@@ -28,7 +28,13 @@ http.createServer((req, res) => {
 		var body = ""
 		req.on("data", chunk => {body += chunk;});
 	    req.on("end", () => {
-			if (!fs.existsSync(datapath+body+".txt")) {var guildlist = fs.readdirSync(datapath);for (i = 0;i < guildlist.length;i++) {guildlist[i] = guildlist[i].replace(".txt","");guildlist[i] = guildlist[i] + "("+client.guilds.cache.get(guildlist[i])+")";}res.end("GuildID List\n"+guildlist);return;}
+			if (!fs.existsSync(datapath+body+".txt")) {
+				var guildlist = fs.readdirSync(datapath);
+				for (i = 0;i < guildlist.length;i++) {
+					guildlist[i] = guildlist[i].replace(".txt","");
+					guild = client.guilds.cache.get(guildlist[i]);guildlist[i] = guildlist[i] + "("+guild.name+")\n";}
+					res.end("GuildID List\n"+guildlist.join(""));return;
+				}
 		    readLastLines.read(datapath+body+".txt", 50)
 		    .then((lines) => res.end(lines));
 	    });
