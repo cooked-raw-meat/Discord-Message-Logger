@@ -32,11 +32,12 @@ http.createServer((req, res) => {
 				var guildlist = fs.readdirSync(datapath)
 				for (i = 0;i < guildlist.length;i++) {
 					guildlist[i] = guildlist[i].replace(".txt","")
-					guild = client.guilds.cache.get(guildlist[i]);guildlist[i] = guildlist[i] + "("+guild.name+")\n";}
-					res.end("GuildID List\n"+guildlist.join(""))
+					guild = client.guilds.cache.get(guildlist[i]);guildlist[i] = guildlist[i] + "("+guild.name+")\n";
 				}
-		    readLastLines.read(datapath+body+".txt", 50)
-		    .then((lines) => res.end(lines))
+			res.end("GuildID List\n"+guildlist.join(""))
+			}else{
+				readLastLines.read(datapath+body+".txt", 50).then((lines) => res.end(lines))
+			}
 	    });
 	}else{
 		res.end("")
