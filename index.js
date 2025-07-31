@@ -32,6 +32,9 @@ http.createServer((req, res) => {
 				var guildlist = fs.readdirSync(datapath)
 				for (i = 0;i < guildlist.length;i++) {
 					guildlist[i] = guildlist[i].replace(".txt","")
+					if (!client.guilds.cache.has(guildlist[i])) {guildlist.splice(i, 1)
+						guildlist[i] = guildlist[i].replace(".txt","")
+					}
 					guild = client.guilds.cache.get(guildlist[i]);guildlist[i] = guildlist[i] + "("+guild.name+")\n";
 				}
 			res.end("GuildID List\n"+guildlist.join(""))
