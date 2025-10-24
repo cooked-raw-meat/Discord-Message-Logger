@@ -8,35 +8,17 @@
 ・simple-git(npm module)<br>
 ・read-last-lines(npm module)<br>
 
-**1. clone a repo & change dir**<br>
+# Execution<br>
+1. Clone Repository<br>
+2. Edit config.json<br>
+3. Replace "token" a your Bot Token<br>
+4. run ```node index.js```<br>
 
-type to console<br>
-"git clone https://github.com/cooked-raw-meat/Discord-Message-Logger.git"<br>
-"cd Discord-Message-Logger"
+# browse log<br>
+1. run ```curl address:port -d ""```
+2. Select a Guild from Guild ID List
+3. run ```curl address:port -d "selected guild id"```
 
-**2. edit to config.json**<br>
-
-・token    : your bot token<br>
-・datapath : log folder
-
-**3. create the shell script for run**<br>
-
-・cmd
-```
-@echo off
-node index.js
-pause
-```
-・bash
-```
-#!/bin/bash
-node index.js
-read -p "press enter to exit"
-```
-
-**4. run shell script**<br>
-
-all steps complete<br>
-
-# Other
-・Update : node update.js
+# Update<br>
+1. run ```node update.js```<br>
+2. Restart Message Logger<br>
