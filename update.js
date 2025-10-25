@@ -12,5 +12,6 @@ function update () {
     fs.removeSync("temp/config.json");
     fs.copySync("temp","./");
     fs.removeSync("temp");
+    console.log("Update has  Successfully")
 }
 updatecheck();
