@@ -28,10 +28,6 @@ http.createServer((req, res) => {
 		var body = ""
 		req.on("data", chunk => {body += chunk;})
 	    req.on("end", () => {
-			if (body.startsWith("..")) {
-				res.end("Forbidden Access")
-				return
-			}
 			var guildlist = fs.readdirSync(datapath)
 				for (i = 0;i < guildlist.length;i++) {
 					guildlist[i] = guildlist[i].replace(".txt","")
@@ -47,3 +43,4 @@ http.createServer((req, res) => {
 		res.end("")
 	}
 }).listen(port, () => console.log("has http server started a "+port+"port"))
+
