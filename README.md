@@ -16,8 +16,8 @@
 
 # browse log<br>
 1. run ```curl address:port -d ""```
-2. Select a Guild from Guild ID List
-3. run ```curl address:port -d "selected guild id"```
+2. Select a Guild & Channel from List
+3. run ```curl address:port -d "guildid,channelid"```
 
 # Update<br>
 1. run ```node update.js```<br>
