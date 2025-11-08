@@ -6,7 +6,6 @@
 ・discord.js(npm module)<br>
 ・fs-extra(npm module)<br>
 ・simple-git(npm module)<br>
-・read-last-lines(npm module)<br>
 
 # Execution<br>
 1. Clone Repository<br>
